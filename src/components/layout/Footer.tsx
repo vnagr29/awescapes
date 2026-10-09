@@ -1,0 +1,5 @@
+import Link from "next/link";
+import { navigation } from "@/data/content";
+export function Footer() {
+  return <footer className="footer"><div className="container"><div className="footer-grid"><div className="footer-brand"><Link className="logo" href="/">awe<span className="logo-dot">.</span>escapes</Link><p>For the places that stay with you.<br />Nepal journey ideas, at your own pace.</p><p>Sample website preview. Operating details to be confirmed.</p></div><nav aria-label="Explore footer"><h2>Explore</h2>{navigation.map(item => <Link key={item.href} href={item.href}>{item.label}</Link>)}</nav><nav aria-label="Useful links"><h2>A little more</h2><Link href="/responsible-travel">Responsible travel</Link><Link href="/reviews">Traveler feedback</Link><Link href="/faqs">Questions & answers</Link><Link href="/contact">Contact</Link><Link href="/plan-your-trip">Plan your trip</Link></nav></div><div className="footer-bottom"><span>© {new Date().getFullYear()} AweEscapes</span><span>Made for curiosity. Designed for a slower look.</span></div></div></footer>;
+}

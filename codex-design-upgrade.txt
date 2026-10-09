@@ -1,0 +1,72 @@
+﻿The current AweEscapes homepage works structurally but looks too basic.
+
+Read AWESCAPES_WEBSITE_PLAN.md completely.
+Inspect the current implementation.
+Upgrade the homepage and shared UI to feel like a premium modern editorial travel brand.
+
+Keep:
+- Same routes and architecture
+- SEO-friendly HTML content
+- Local/static data only
+- No Sanity/CMS yet
+
+Do not copy Ace the Himalaya, Motion.dev, UUPM, or 21st.dev content, design, images, or branding.
+
+Improve:
+1. Header
+2. Hero
+3. Confidence / trust strip
+4. Experience cards
+5. Destination cards
+6. Planning guide cards
+7. Final CTA
+8. Spacing
+9. Typography
+10. Color usage
+11. Hover states
+12. Mobile layout
+
+Design direction:
+- Premium
+- Editorial
+- Warm
+- Human
+- Modern travel brand
+- Experience-led, not old trekking-agency style
+
+Use AweEscapes colors tastefully:
+#FF2C5A
+#FF9515
+#2E97FF
+#FF5B00
+
+Hero:
+- Use headline: Step out. Feel more.
+- Use subheadline: Curated Nepal escapes shaped around adventure, culture, nature, and meaningful moments.
+- Primary CTA: Explore experiences
+- Secondary CTA: Plan your trip
+- Add neutral trust cues only:
+  Local planning
+  Flexible journeys
+  Experience-first design
+
+Content rules:
+- Do not fabricate reviews, awards, memberships, prices, permits, or credentials.
+- If proof is missing, use neutral wording or label as sample layout only.
+- Keep important content visible in HTML.
+
+Motion rules:
+- Use Motion only for subtle fade-up, card hover, navigation, and CTA interactions.
+- Respect reduced motion.
+- Do not delay hero content.
+- No WebGL.
+- No particles.
+- No parallax.
+- No autoplay video.
+- No heavy visual effects.
+
+After editing:
+1. Run relevant checks if possible.
+2. List modified files.
+3. Explain the design changes.
+4. Tell me how to review locally.

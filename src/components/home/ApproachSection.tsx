@@ -1,0 +1,4 @@
+import Link from "next/link";
+export function ApproachSection() {
+  return <section className="tinted section"><div className="container split"><div><p className="eyebrow">The AweEscapes idea</p><h2>A journey should fit the person taking it.</h2><p className="lede muted">Start with what moves you. Build in the practical details. Leave a little room for discovery.</p><Link href="/about" className="text-link">Get to know the idea <span aria-hidden="true">↗</span></Link></div><ol className="steps"><li><h3><b>01</b>Start with you</h3><p className="muted">Your interests, energy, comfort, and the time you have.</p></li><li><h3><b>02</b>Make the details clear</h3><p className="muted">Understand the pace, everyday arrangements, and what still needs confirming.</p></li><li><h3><b>03</b>Leave space to be there</h3><p className="muted">Balance the things you want to do with time to enjoy where you are.</p></li></ol></div></section>;
+}
