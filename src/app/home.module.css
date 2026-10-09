@@ -1,0 +1,258 @@
+/* Homepage composition. Shared cards retain their existing styles on other routes. */
+.home {
+  --home-accent: #a92245;
+  --home-rule: #d7d6c9;
+}
+
+.home :global(.section) { padding-block: clamp(64px, 7vw, 104px); }
+.home :global(.eyebrow) { letter-spacing: .16em; }
+.home :global(h2) { font-size: clamp(2.3rem, 4.2vw, 3.8rem); line-height: 1.08; }
+.home :global(.section-heading) { align-items: end; gap: 36px; }
+.home :global(.section-heading h2) { max-width: 680px; margin-bottom: 0; }
+.home :global(.section-heading .lede) { margin-top: 22px; }
+.home :global(.text-link) { white-space: normal; }
+.home :global(a:focus-visible) { outline: 3px solid #1666ac; outline-offset: 5px; }
+
+/* A landscape cover, with all copy visible before hydration. */
+.home :global(.hero) { padding-block: 24px 0; }
+.home :global(.hero-topline),
+.home :global(.hero-bottomline) { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.home :global(.hero-topline) { padding-bottom: 20px; }
+.home :global(.hero-topline .eyebrow) { display: flex; align-items: center; gap: 10px; margin: 0; }
+.home :global(.brand-spark) { font-size: 1.3rem; }
+.home :global(.hero-edition) { font-size: .73rem; color: var(--muted); }
+.home :global(.hero-layout) { display: block; position: relative; isolation: isolate; overflow: hidden; border-radius: 4px; background: #203f39; }
+.home :global(.hero-visual) { position: absolute; inset: 0; margin: 0; z-index: -2; }
+.home :global(.hero-art) { height: 100%; min-height: 0; border-radius: 0; }
+.home :global(.hero-art img) { object-position: 65% center; }
+.home :global(.hero-layout)::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #173a32fa, #173a32e6 30%, #173a3259 62%, #173a3200 85%); pointer-events: none; }
+.home :global(.hero-copy) { padding: 60px 56px 68px; max-width: 690px; color: #fff9eb; }
+.home :global(.hero-kicker) { font-size: .76rem; letter-spacing: .06em; margin-bottom: 28px; color: #efe8d5; }
+.home :global(.hero h1) { font-size: clamp(5rem, 8.4vw, 8rem); letter-spacing: -.065em; line-height: .98; margin-bottom: 28px; }
+.home :global(.hero h1 em) { color: #f3c8b5; }
+.home :global(.hero .lede) { max-width: 390px; font-size: 1rem; line-height: 1.8; color: #f1eddf; }
+.home :global(.hero .actions) { margin-top: 32px; gap: 12px; flex-direction: row; }
+.home :global(.hero .button) { border-radius: 3px; background: #f8f5ee; border-color: #f8f5ee; color: #24352f; gap: 22px; }
+.home :global(.hero .button:hover) { background: #f3d8b7; border-color: #f3d8b7; }
+.home :global(.hero .button-light) { color: #fff9eb; background: #173a3280; border-color: #e3e7dc80; }
+.home :global(.hero .button-light:hover) { background: #173a32; border-color: #fff9eb; }
+.home :global(.hero a:focus-visible) { outline-color: #f3d8b7; }
+.home :global(.hero-visual figcaption) { position: absolute; right: 28px; bottom: 25px; display: flex; flex-direction: column; align-items: end; gap: 3px; margin: 0; padding: 7px 12px; color: #fff9eb; background: #173a32e6; font-size: .72rem; }
+.home :global(.hero-visual figcaption span) { font-size: .68rem; color: #dedfcd; }
+.home :global(.hero-compass) { position: absolute; top: 30px; right: 32px; display: grid; text-align: center; font-size: .6rem; letter-spacing: .1em; color: #203f39; }
+.home :global(.hero-compass span) { font-size: 2.9rem; line-height: 1.1; }
+.home :global(.hero-bottomline) { padding-block: 15px; border-bottom: 1px solid var(--home-rule); }
+.home :global(.hero-bottomline p) { margin: 0; font-size: .73rem; color: var(--muted); }
+.home :global(.hero-bottomline .text-link) { border: 0; font-size: .73rem; }
+
+/* Quiet service cues and four editorial entry points. */
+.home :global(.confidence) { border: 0; background: transparent; padding-block: 32px 0; }
+.home :global(.confidence-inner) { grid-template-columns: 1fr 3fr; gap: 32px; align-items: center; }
+.home :global(.confidence-label) { font-family: Georgia, serif; font-size: 1.35rem; font-weight: 400; line-height: 1.3; }
+.home :global(.service-cues) { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.home :global(.service-cues li) { display: flex; gap: 14px; align-items: start; border-left: 1px solid var(--home-rule); padding-left: 20px; }
+.home :global(.service-cues li > span) { font-size: .65rem; color: var(--home-accent); padding-top: 3px; }
+.home :global(.service-cues strong) { font-size: .83rem; font-weight: 600; }
+.home :global(.service-cues p) { font-size: .75rem; color: var(--muted); margin: 5px 0 0; }
+.home :global(.confidence-note) { font-size: .71rem; margin-top: 22px; }
+.home :global(.home-categories) { scroll-margin-top: 24px; padding-bottom: 64px; }
+.home :global(.home-categories .section-heading h2) { max-width: none; }
+.home :global(.category-grid) { gap: 16px; border: 0; }
+.home :global(.category) { padding: 28px 24px; border: 1px solid #ddd7cb; border-radius: 5px; background: #f3e9e6; }
+.home :global(.category:nth-child(2)) { background: #f4efdf; }
+.home :global(.category:nth-child(3)) { background: #e8efeb; }
+.home :global(.category:nth-child(4)) { background: #f3e9de; }
+.home :global(.category)::before { display: none; }
+.home :global(.category-top) { display: flex; align-items: start; justify-content: space-between; gap: 16px; color: #91465a; margin-bottom: 32px; }
+.home :global(.category:nth-child(2) .category-top) { color: #816025; }
+.home :global(.category:nth-child(3) .category-top) { color: #376657; }
+.home :global(.category:nth-child(4) .category-top) { color: #89512d; }
+.home :global(.category .number) { background: transparent; color: inherit; font-size: .7rem; margin: 0; }
+.home :global(.category h3) { font-size: 1rem; line-height: 1.6; }
+.home :global(.category p) { font-size: .83rem; }
+.home :global(.category:hover),
+.home :global(.category:focus-visible) { background: #e8e5d9; border-color: #969c89; }
+
+/* Consistent image frames and readable facts; no overlay hides the journey details. */
+.home :global(.home-experiences) { padding-top: 32px; }
+.home :global(.sample-note) { background: transparent; border-left-color: #a35421; padding-block: 3px; border-radius: 0; font-size: .74rem; }
+.home :global(.experience-grid) { gap: 44px 32px; }
+.home :global(.experience-card .card-link) { height: 100%; border: 1px solid var(--home-rule); background: #fcfaf5; border-radius: 5px; }
+.home :global(.experience-card .card-body) { padding: 24px; }
+.home :global(.card-image),
+.home :global(.experience-card .card-art) { border-radius: 4px 4px 0 0; }
+.home :global(.experience-card .card-art) { aspect-ratio: 1.65; }
+.home :global(.image-tag) { border-radius: 2px; font-size: .68rem; padding: 8px 12px; }
+.home :global(.card-meta) { font-size: .73rem; }
+.home :global(.experience-card h3) { display: flex; align-items: start; justify-content: space-between; gap: 16px; font-size: clamp(1.55rem, 2.5vw, 2rem); line-height: 1.2; }
+.home :global(.card-arrow) { flex-shrink: 0; }
+.home :global(.suitability) { border-top: 1px solid var(--home-rule); padding-top: 16px; font-size: .8rem !important; }
+.home :global(.illustration-label) { font-size: .66rem; }
+.home :global(.card-link:focus-visible h3) { color: var(--home-accent); }
+.home :global(.card-link:focus-visible .card-arrow) { background: #ffdedf; }
+
+/* Destinations read like an atlas spread, with captions on paper. */
+.home :global(.home-destinations) { background: #eaece2; border-block: 1px solid #d9dfd0; }
+.home :global(.destination-grid) { gap: 24px; }
+.home :global(.destination-card .card-link) { background: transparent; overflow: visible; border-radius: 0; }
+.home :global(.destination-card .card-art) { aspect-ratio: .85; border-radius: 120px 120px 3px 3px; border: 1px solid #cdd4c3; }
+.home :global(.destination-card .card-body) { position: static; background: transparent; padding: 22px 0 0; color: var(--ink); }
+.home :global(.destination-card .eyebrow) { color: #58644f; }
+.home :global(.destination-card h3) { font-size: 1.5rem; min-height: 2.4em; }
+.home :global(.destination-card .muted) { color: #53604e; font-size: .8rem; }
+.home :global(.destination-caption) { color: #596550; font-size: .7rem; }
+.home :global(.destination-card .card-arrow) { border-color: #aeb9a4; }
+.home :global(.destination-card .card-link:hover h3) { color: var(--home-accent); }
+.home :global(.destination-card .card-link:hover .card-arrow) { background: #f8f5ee; }
+.home :global(.home-approach) { padding-bottom: 0; }
+.home :global(.approach-layout) { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 72px; }
+.home :global(.approach-intro) { position: relative; isolation: isolate; overflow: hidden; padding: 44px; background: #eee5d8; border-radius: 4px; }
+.home :global(.approach-intro h2) { font-size: clamp(2.4rem, 3.5vw, 3.3rem); }
+.home :global(.approach-intro em) { color: #8b3d4e; }
+.home :global(.approach-intro .lede) { font-size: .98rem; margin-block: 24px; }
+.home :global(.approach-spark) { position: absolute; right: -28px; bottom: -60px; z-index: -1; font-size: 220px; line-height: 1; color: #dfd3bf; }
+.home :global(.approach-steps) { list-style: none; margin: 0; padding: 0; }
+.home :global(.approach-steps li) { display: grid; grid-template-columns: 48px 1fr; gap: 24px; padding-block: 30px; border-bottom: 1px solid var(--home-rule); }
+.home :global(.approach-steps li:first-child) { padding-top: 0; }
+.home :global(.approach-steps li:last-child) { border-bottom: 0; padding-bottom: 0; }
+.home :global(.approach-steps li > span) { border: 1px solid #b6beac; border-radius: 50%; height: 48px; display: grid; place-items: center; font-size: .75rem; }
+.home :global(.approach-steps h3) { font-family: Georgia, serif; font-weight: 400; font-size: 1.6rem; letter-spacing: -.025em; margin-bottom: 12px; }
+.home :global(.approach-steps p) { font-size: .9rem; color: var(--muted); margin: 0; max-width: 360px; }
+
+/* A magazine feature and honest, compact space for future traveler voices. */
+.home :global(.home-editorial) { align-items: center; gap: 72px; }
+.home :global(.editorial-figure) { margin: 0; min-width: 0; }
+.home :global(.editorial-art) { min-height: 0; aspect-ratio: 1; border-radius: 3px; }
+.home :global(.editorial-figure figcaption) { display: flex; justify-content: space-between; gap: 12px; font-size: .68rem; color: var(--muted); margin-top: 12px; }
+.home :global(.editorial-copy h2) { font-size: clamp(2.8rem, 4.7vw, 4.4rem); }
+.home :global(.editorial-copy em) { color: var(--home-accent); }
+.home :global(.editorial-note) { color: var(--muted); font-size: .73rem; margin: 24px 0 0; }
+.home :global(.feedback) { padding-block: 32px; gap: 12px 60px; }
+.home :global(.feedback h2) { font-size: 2.3rem; max-width: 450px; }
+.home :global(.section.pt-0) { padding-top: 0; padding-bottom: 0; }
+
+/* Planning cards follow a shared baseline, even when titles wrap. */
+.home :global(.guide-card) { background: transparent; border: 1px solid var(--home-rule); border-radius: 3px; }
+.home :global(.guide-link) { padding: 30px; gap: 0; }
+.home :global(.guide-number) { display: flex; justify-content: space-between; align-items: center; font-size: 3.2rem; color: #9c4d57; margin-bottom: 28px; }
+.home :global(.guide-mark) { font-family: 'Segoe UI', sans-serif; display: grid; place-items: center; border: 1px solid var(--home-rule); border-radius: 50%; width: 36px; height: 36px; font-size: 1rem; color: var(--ink); }
+.home :global(.guide-card:nth-child(2) .guide-number) { color: #426a7b; }
+.home :global(.guide-card:nth-child(3) .guide-number) { color: #866031; }
+.home :global(.guide-card .eyebrow) { margin: 0 0 14px; font-size: .65rem; }
+.home :global(.guide-card h3) { font-size: 1.8rem; line-height: 1.18; }
+.home :global(.guide-card p.muted) { font-size: .85rem; margin-bottom: 28px; }
+.home :global(.guide-card .text-link) { font-size: .77rem; }
+.home :global(.guide-card:hover),
+.home :global(.guide-card:focus-within) { background: #efece2; border-color: #acb39f; }
+
+/* A generous last invitation, without additional animation or client code. */
+.home :global(.cta-section) { padding-top: 0; }
+.home :global(.inquiry-cta) { padding: 72px 60px; border-radius: 3px; gap: 64px; background: #243e34; }
+.home :global(.inquiry-cta h2) { font-size: clamp(2.7rem, 4.5vw, 4.3rem); }
+.home :global(.inquiry-cta .button) { border-radius: 3px; min-width: 210px; justify-content: space-between; }
+.home :global(.inquiry-cta a:focus-visible) { outline-color: #f3d8b7; }
+.home :global(.inquiry-cta .cta-note) { font-size: .76rem; line-height: 1.6; color: #d8decd; max-width: 340px; }
+.home :global(.cta-spark) { right: -25px; bottom: -55px; font-size: 290px; }
+
+@media (max-width: 1100px) {
+  .home :global(.hero-copy) { padding-inline: 40px; }
+  .home :global(.hero-layout)::after { background: linear-gradient(90deg, #173a32fa, #173a32e6 35%, #173a3240 100%); }
+  .home :global(.category) { padding-inline: 18px; }
+  .home :global(.approach-layout) { gap: 36px; }
+  .home :global(.approach-intro) { padding: 32px; }
+  .home :global(.category h3 span) { float: none; margin-left: 6px; }
+  .home :global(.destination-grid) { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+  .home :global(.destination-card .card-art) { aspect-ratio: 1.15; }
+  .home :global(.destination-card h3) { min-height: 0; }
+  .home :global(.inquiry-cta) { padding: 48px 36px; gap: 36px; }
+}
+
+@media (max-width: 850px) {
+  .home :global(.container) { width: calc(100% - 40px); }
+  .home :global(.hero-copy) { padding: 54px 32px 96px; }
+  .home :global(.hero .lede) { max-width: 360px; }
+  .home :global(.hero-compass) { display: none; }
+  .home :global(.confidence-inner) { grid-template-columns: 1fr; gap: 24px; }
+  .home :global(.confidence-label) { grid-column: 1 / -1; }
+  .home :global(.category-grid) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home :global(.planning-section .cards) { grid-template-columns: 1fr; gap: 16px; }
+  .home :global(.guide-link) { display: grid; grid-template-columns: 60px 1fr; column-gap: 24px; }
+  .home :global(.guide-number) { grid-row: span 4; margin: 0; }
+  .home :global(.guide-mark) { display: none; }
+  .home :global(.guide-number) { align-self: start; }
+  .home :global(.guide-link .text-link) { justify-self: start; }
+  .home :global(.guide-card h3) { max-width: none; }
+}
+
+@media (max-width: 720px) {
+  .home :global(.section) { padding-block: 64px; }
+  .home :global(.hero) { padding-top: 18px; }
+  .home :global(.hero-topline) { padding-bottom: 16px; }
+  .home :global(.hero-topline .eyebrow) { font-size: .6rem; letter-spacing: .12em; }
+  .home :global(.hero-edition) { display: none; }
+  .home :global(.hero-copy) { max-width: none; padding: 32px 24px 160px; }
+  .home :global(.hero-layout)::after { background: linear-gradient(180deg, #173a32fc 0%, #173a32f5 48%, #173a32a6 68%, #173a3200 90%); }
+  .home :global(.hero-art img) { object-position: 63% center; }
+  .home :global(.hero-kicker) { font-size: .68rem; margin-bottom: 24px; }
+  .home :global(.hero h1) { font-size: clamp(3.5rem, 13.5vw, 6rem); margin-bottom: 24px; }
+  .home :global(.hero .lede) { font-size: .95rem; max-width: 390px; }
+  .home :global(.hero .actions) { flex-direction: column; align-items: stretch; max-width: 360px; margin-top: 26px; }
+  .home :global(.hero .button) { justify-content: space-between; min-height: 50px; }
+  .home :global(.hero-visual figcaption) { right: 18px; bottom: 18px; font-size: .65rem; }
+  .home :global(.hero-bottomline) { flex-wrap: wrap; gap: 2px; padding-block: 12px; }
+  .home :global(.hero-bottomline .text-link) { font-size: .73rem; }
+  .home :global(.confidence-inner) { gap: 20px; }
+  .home :global(.confidence-label) { margin: 0; font-size: 1.4rem; }
+  .home :global(.service-cues) { grid-template-columns: 1fr; gap: 16px; }
+  .home :global(.service-cues li) { padding-left: 0; border: 0; gap: 18px; }
+  .home :global(.service-cues li > span) { width: 26px; padding-top: 5px; }
+  .home :global(.service-cues strong) { font-size: .88rem; }
+  .home :global(.service-cues p) { margin-top: 2px; font-size: .78rem; }
+  .home :global(.confidence-note) { font-size: .71rem; }
+  .home :global(.home-categories) { padding-bottom: 44px; }
+  .home :global(.home-experiences) { padding-top: 20px; }
+  .home :global(.category) { padding: 24px 16px; }
+  .home :global(.category h3) { font-size: .92rem; }
+  .home :global(.category p) { font-size: .79rem; }
+  .home :global(.category .number) { margin: 0; }
+  .home :global(.category-top) { margin-bottom: 24px; }
+  .home :global(.experience-grid) { gap: 30px; }
+  .home :global(.experience-card .card-art) { aspect-ratio: 1.3; }
+  .home :global(.experience-card .card-body) { padding: 20px; }
+  .home :global(.experience-card .card-arrow) { width: 28px; height: 28px; font-size: 1rem; }
+  .home :global(.destination-grid) { gap: 30px 18px; }
+  .home :global(.destination-card .card-art) { aspect-ratio: .8; border-radius: 90px 90px 3px 3px; }
+  .home :global(.destination-card .card-body) { padding-top: 18px; }
+  .home :global(.destination-card h3) { font-size: 1.35rem; }
+  .home :global(.destination-card .muted) { font-size: .75rem; }
+  .home :global(.home-editorial) { gap: 36px; }
+  .home :global(.home-approach) { padding-bottom: 0; }
+  .home :global(.approach-layout) { grid-template-columns: 1fr; gap: 36px; }
+  .home :global(.approach-intro) { padding: 30px 24px; }
+  .home :global(.approach-intro h2) { font-size: 2.5rem; }
+  .home :global(.approach-steps li) { grid-template-columns: 40px 1fr; gap: 18px; padding-block: 24px; }
+  .home :global(.approach-steps li > span) { height: 40px; }
+  .home :global(.editorial-copy h2) { font-size: 3rem; }
+  .home :global(.editorial-figure figcaption) { font-size: .63rem; }
+  .home :global(.feedback) { gap: 20px; }
+  .home :global(.guide-link) { padding: 24px 20px; grid-template-columns: 38px 1fr; gap: 0 18px; }
+  .home :global(.guide-number) { font-size: 2.2rem; }
+  .home :global(.guide-card h3) { font-size: 1.6rem; }
+  .home :global(.inquiry-cta) { padding: 36px 24px; gap: 24px; }
+  .home :global(.inquiry-cta h2) { font-size: 2.7rem; }
+  .home :global(.cta-section),
+  .home :global(.section.pt-0) { padding-top: 0; }
+  .home :global(.section.pt-0) { padding-bottom: 0; }
+}
+
+@media (max-width: 380px) {
+  .home :global(.hero-copy) { padding-inline: 20px; }
+  .home :global(.category-grid),
+  .home :global(.destination-grid) { grid-template-columns: 1fr; }
+  .home :global(.destination-card .card-art) { aspect-ratio: 1.15; }
+  .home :global(.inquiry-cta h2) { font-size: 2.35rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home :global(a), .home :global(.card-art), .home :global(.card-arrow), .home :global(h3) { transition: none; }
+}

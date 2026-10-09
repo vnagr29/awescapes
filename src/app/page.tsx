@@ -9,5 +9,21 @@ import { EditorialFeature } from "@/components/home/EditorialFeature";
 import { TravelerFeedback } from "@/components/home/TravelerFeedback";
 import { PlanningGuides } from "@/components/home/PlanningGuides";
 import { InquiryCTA } from "@/components/home/InquiryCTA";
+import styles from "./home.module.css";
 export const metadata = pageMetadata("Step out. Feel more. | Nepal escapes", "Curated Nepal escapes shaped around adventure, culture, nature, and meaningful moments. Explore sample journeys and ideas for your trip.", "/");
-export default function Home() { return <><HeroSection /><ConfidenceStrip /><ExperienceCategories /><FeaturedExperiences /><div className="tinted"><DestinationGrid /></div><ApproachSection /><EditorialFeature /><TravelerFeedback /><PlanningGuides /><InquiryCTA /></>; }
+export default function Home() {
+  return (
+    <div className={styles.home}>
+      <HeroSection />
+      <ConfidenceStrip />
+      <ExperienceCategories />
+      <FeaturedExperiences />
+      <div className="home-destinations"><DestinationGrid /></div>
+      <ApproachSection />
+      <EditorialFeature />
+      <TravelerFeedback />
+      <PlanningGuides />
+      <InquiryCTA />
+    </div>
+  );
+}

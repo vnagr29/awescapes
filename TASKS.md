@@ -15,6 +15,21 @@ Use unchecked tasks as remaining work or verification needs. Complete tasks only
 - [x] Read and preserve the existing AGENTS.md instructions.
 - [x] Create TASKS.md, DESIGN.md, SEO.md, and WORKLOG.md from the plan and current implementation context.
 
+## Requested Phase 1 - Homepage visual upgrade (2026-10-09)
+
+This scoped design phase follows the user's explicit request. It is separate from the original plan's numbered business-validation phase below; those business tasks remain pending.
+
+- [x] Upgrade the homepage hero, typography, spacing, category links, journey and destination cards, editorial feature, planning cards, and final inquiry invitation.
+- [x] Scope page-content styles to the homepage and retain local content, existing routes, visible concept labels, and original illustration attribution.
+- [x] Polish the shared header, native mobile navigation, and footer as explicitly requested; verify the shared layout on the experience listing as well as the homepage.
+- [x] Pass TypeScript, production build, and existing local smoke checks.
+- [x] Review desktop/mobile screenshots and check production layouts at 320, 390, 768, 1024, and 1440 pixels, including image loading, overflow, anchor targets, reduced motion, and keyboard menu operation.
+- [x] Record changes, verification, and limitations in WORKLOG.md.
+
+Complete for the homepage-only scope. This does not complete the broader site, launch-content, accessibility audit, or business-verification tasks below.
+
+The expanded Phase 1 pass also covers original category line icons, clearer proposed service cues, framed experience cards, the approach panel, story and guide details, preview-aware inquiry wording, and footer touch targets. See the latest WORKLOG.md entry for changed files and current validation.
+
 ## 1. Business and content validation
 
 - [ ] Confirm final brand spelling, assets, audience, and service positioning.

@@ -1,0 +1,67 @@
+.header {
+  border-bottom: 1px solid #dedfd4;
+  background: #f8f5ee;
+}
+
+.header :global(.header-inner) { min-height: 100px; gap: 32px; }
+.header :global(.logo) { font-size: 1.85rem; letter-spacing: -.07em; }
+.header :global(.brand-caption) { font-size: .58rem; letter-spacing: .2em; margin-top: 9px; }
+.header :global(.desktop-nav) { gap: clamp(18px, 2vw, 30px); }
+.header :global(.desktop-nav a) { min-height: 44px; font-size: .84rem; display: inline-flex; align-items: center; }
+.header :global(.desktop-nav a)::after { background: #a92245; }
+.headerActions { display: flex; align-items: center; gap: 16px; }
+.header :global(.header-cta) { display: inline-flex; border-radius: 4px; min-height: 48px; padding: 12px 20px; gap: 24px; }
+.header :global(.mobile-nav summary) { min-height: 48px; border-radius: 4px; border-color: #aeb6a8; }
+.header :global(.mobile-panel) { padding: 28px max(20px, calc((100vw - 1280px) / 2)); border-bottom: 1px solid #aeb6a8; box-shadow: 0 14px 24px #24352f12; max-height: calc(100dvh - 100px); }
+.header :global(.mobile-panel .eyebrow) { color: #626a61; font-size: .65rem; margin: 0 10px 14px; }
+.header :global(.mobile-panel a) { display: flex; align-items: center; justify-content: space-between; min-height: 52px; gap: 20px; }
+.header :global(.mobile-panel a[aria-current="page"]) { color: #a92245; }
+.header :global(.mobile-panel a:last-child) { border-radius: 4px; color: #fff9eb; }
+.header :global(a:focus-visible),
+.header :global(summary:focus-visible) { outline: 3px solid #1666ac; outline-offset: 4px; }
+
+.footer { padding-top: 64px; background: #1f312a; }
+.footerPrelude { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-bottom: 48px; margin-bottom: 48px; border-bottom: 1px solid #526156; }
+.footer .footerPrelude p { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.7rem, 4.8vw, 4.6rem); line-height: 1.1; letter-spacing: -.045em; color: #fff9eb; margin: 0; max-width: none; }
+.footerPrelude em { color: #f3c8b5; }
+.footerPrelude > span { font-size: 7rem; line-height: 1; color: #f3c8b5; }
+.footer :global(.footer-grid) { grid-template-columns: 1.6fr 1fr 1fr; gap: 64px; }
+.footer :global(.footer-brand .logo) { font-size: 2rem; margin-bottom: 18px; }
+.footer :global(.footer-brand p) { font-size: .9rem; max-width: 300px; }
+.footer .previewNote { font-size: .75rem; line-height: 1.7; color: #c5cdbf; margin-top: 24px; }
+.footer :global(nav h2) { color: #dce0cf; font-size: .7rem; letter-spacing: .15em; margin-bottom: 14px; }
+.footer :global(nav a:not(.logo)) { min-height: 44px; width: fit-content; font-size: .87rem; display: flex; align-items: center; padding-block: 10px; }
+.footer :global(nav a:hover) { text-decoration: underline; text-underline-offset: 5px; }
+.footer :global(a:focus-visible) { outline: 3px solid #f3d8b7; outline-offset: 4px; }
+.footer :global(.footer-bottom) { border-color: #526156; margin-top: 48px; padding-top: 24px; font-size: .75rem; color: #c5cdbf; }
+
+@media (max-width: 1050px) {
+  .header :global(.desktop-nav) { display: none; }
+  .header :global(.mobile-nav) { display: block; }
+  .header :global(.header-inner) { min-height: 88px; }
+  .header :global(.mobile-panel) { max-height: calc(100dvh - 88px); }
+}
+
+@media (max-width: 720px) {
+  .header :global(.header-inner) { min-height: 80px; gap: 16px; }
+  .header :global(.logo) { font-size: 1.55rem; }
+  .header :global(.brand-caption) { font-size: .51rem; }
+  .headerActions { gap: 10px; }
+  .header :global(.mobile-panel) { max-height: calc(100dvh - 80px); }
+  .footer { padding-block: 48px 24px; }
+  .footerPrelude { padding-bottom: 32px; margin-bottom: 36px; gap: 18px; }
+  .footer .footerPrelude p { font-size: clamp(2rem, 6.7vw, 3rem); }
+  .footerPrelude > span { font-size: 3.5rem; }
+  .footer :global(.footer-grid) { grid-template-columns: 1fr 1fr; gap: 32px 24px; }
+  .footer :global(.footer-brand) { grid-column: 1 / -1; }
+  .footer :global(.footer-brand .logo) { font-size: 1.8rem; }
+  .footer :global(.footer-bottom) { margin-top: 32px; gap: 10px; }
+}
+
+@media (max-width: 520px) {
+  .header :global(.header-cta) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header :global(a), .header :global(a)::after { transition: none; }
+}
